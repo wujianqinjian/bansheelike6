@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!--    <link rel="icon" href="<%= BASE_URL %>favicon.ico">-->
+    <link rel="icon" href="../wujianqinjian.png">
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!--引入vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12" type="text/javascript"></script>
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <title>我与报丧女妖的故事</title>
+  </head>
+  <body>
+  <el-row :gutter="20">
+      <el-col :span="8">
+          <div class="grid-content bg-purple">
+
+          </div>
+      </el-col>
+      <el-col :span="16">
+          <div class="grid-content bg-purple">
+              <div id="medicalmainmenu2">
+                  <a href="https://space.bilibili.com/11514636/"><button class="mainMenuButton" onclick="">{{ home }}</button></a>
+                  <button class="mainMenuButton" >{{ note }}</button>
+                  <button class="mainMenuButton" >{{ photo }}</button>
+                  <button class="mainMenuButton" >{{ bansheehsu }}</button>
+                  <button class="mainMenuButton" >{{ team }}</button>
+              </div>
+          </div>
+      </el-col>
+  </el-row>
+          <div class="grid-content bg-purple-light">
+
+          </div>
+
+  <el-row>
+      <el-col :span="8"><div class="grid-content bg-purple"></div></el-col>
+      <el-col :span="8"><div class="grid-content bg-purple-light"></div></el-col>
+      <el-col :span="8"><div class="grid-content bg-purple"></div></el-col>
+  </el-row>
+  <el-row>
+      <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+      <el-col :span="6"><div class="grid-content bg-purple-light"></div></el-col>
+      <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+      <el-col :span="6"><div class="grid-content bg-purple-light"></div></el-col>
+  </el-row>
+  <el-row>
+      <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
+      <el-col :span="4"><div class="grid-content bg-purple-light"></div></el-col>
+      <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
+      <el-col :span="4"><div class="grid-content bg-purple-light"></div></el-col>
+      <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
+      <el-col :span="4"><div class="grid-content bg-purple-light"></div></el-col>
+  </el-row>
+
+    <div class="backstar" style="overflow:auto">
+        <div id="topMenu">
+            <div id="pageTopTitle">我与报丧女妖的故事</div>
+            <div id="medicalmainmenu">
+                <a href="https://space.bilibili.com/11514636/"><button class="mainMenuButton" onclick="">{{ home }}</button></a>
+                <button class="mainMenuButton" >{{ note }}</button>
+                <button class="mainMenuButton" >{{ photo }}</button>
+                <button class="mainMenuButton" >{{ bansheehsu }}</button>
+                <button class="mainMenuButton" >{{ team }}</button>
+            </div>
+        </div>
+        <div id="searchIput">
+            <el-input v-model="input" placeholder="请输入内容"></el-input>
+        </div>
+        <div id="videoLIst">
+            <div id="vBansheeHsu1" class="bansheeVideo">
+
+                <video src="../static/overdressedBanshee.mp4" controls="controls" height="500"></video>
+            </div>
+            <div id="vBansheeHsu2" class="bansheeVideo">
+                <video src="../static/overdressedBanshee.mp4" controls="controls" height="500"></video>
+            </div>
+            <div id="vBansheeHsu3" class="bansheeVideo">
+                <video src="../static/overdressedBanshee.mp4" controls="controls" height="500"></video>
+            </div>
+            <div id="vBansheeHsu4" class="bansheeVideo">
+                <video src="../static/overdressedBanshee.mp4" controls="controls" height="500"></video>
+            </div>
+            <div id="vBansheeHsu5" class="bansheeVideo">
+                <video src="../static/overdressedBanshee.mp4" controls="controls" height="500"></video>
+            </div>
+        </div>
+        <div class="logoimage" style="padding-top: 50px">
+            <a href="https://www.bilibili.com/video/BV1rQ4y1d7UP"><img src="../static/wujianqinjian.png"></a>
+        </div>
+        <div id="testheight" class="logoimage" style="padding-top: 50px">
+            <img src="../static/wujianqinjian.png">
+        </div>
+        <div id="testheight2" class="logoimage" style="padding-top: 50px">
+            <img src="../static/wujianqinjian.png">
+        </div>
+    </div>
+  </body>
+  <script>
+      var uMessageName = {name:'fanrui'}
+      var vm=new Vue({
+          el : '#app',
+          data :
+              {
+                  banshee : "报丧女妖"
+              },
+          el : '#medicalmainmenu2',
+          data:
+              {   home:'家',
+                  note:'笔记',
+                  photo:'照片',
+                  bansheehsu:'妖女',
+                  team:'团队',
+
+              }
+
+      });
+  var propertyTest=new Vue({
+      el: '#newtest',
+      data:
+          {
+          color:'test1'
+      }
+  });
+
+/*  var pageTop=new Vue({
+     el:'#pageTopTitle',
+     data:
+         {
+         color:'pagetitlecolor'
+     }
+  })
+
+  vm.$data.artificalRegistration="test"*/
+  </script>
+</html>

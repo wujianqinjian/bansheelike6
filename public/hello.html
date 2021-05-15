@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- import Vue before Element -->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <!-- import JavaScript -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+</head>
+<body>
+
+    <div id="checkmedicalsecuritybalance">
+            <p>test</p>
+            <p>{{ medicalsecuritybalance > bill ? notenough : enough }}</p>
+    </div>
+</body>
+
+<script>
+    var vmpay=new Vue({
+        el:'#checkmedicalsecuritybalance',
+        data:
+            {
+                medicalsecuritybalance:11111,
+                bill:999,
+                notenough: '支付成功',
+                enough:'余额不足'
+            }
+    })
+</script>
+
+</html>

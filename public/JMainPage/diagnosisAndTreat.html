@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!--    <link rel="icon" href="<%= BASE_URL %>favicon.ico">-->
+    <link rel="icon" href="../wujianqinjian.png">
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!--引入vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12" type="text/javascript"></script>
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <title>诊疗页</title>
+  </head>
+  <body>
+    <div class="backstar" style="overflow:auto">
+        <div id="topMenu">
+            <div id="pageTopTitle">我与报丧女妖的故事</div>
+            <div id="medicalmainmenu">
+                <a href="https://space.bilibili.com/11514636/"><button class="mainMenuButton" onclick="">{{ home }}</button></a>
+                <button class="mainMenuButton" >{{ epidemicQuestionnaire }}</button>
+                <button class="mainMenuButton" >{{ diagnosisGuidance }}</button>
+                <button class="mainMenuButton" >{{ examination }}</button>
+                <button class="mainMenuButton" >{{ myBill  }}</button>
+            </div>
+        </div>
+        <div id="videoLIst">
+            <div id="vBansheeHsu1" class="bansheeVideo">
+                <video src="../static/overdressedBanshee.mp4" controls="controls" height="500"></video>
+            </div>
+            <div id="vBansheeHsu2" class="bansheeVideo">
+                <video src="../static/overdressedBanshee.mp4" controls="controls" height="500"></video>
+            </div>
+            <div id="vBansheeHsu3" class="bansheeVideo">
+                <video src="../static/overdressedBanshee.mp4" controls="controls" height="500"></video>
+            </div>
+            <div id="vBansheeHsu4" class="bansheeVideo">
+                <video src="../static/overdressedBanshee.mp4" controls="controls" height="500"></video>
+            </div>
+            <div id="vBansheeHsu5" class="bansheeVideo">
+                <video src="../static/overdressedBanshee.mp4" controls="controls" height="500"></video>
+            </div>
+        </div>
+        <div class="logoimage" style="padding-top: 50px">
+            <a href="https://www.bilibili.com/video/BV1rQ4y1d7UP"><img src="../static/wujianqinjian.png"></a>
+        </div>
+        <div id="testheight" class="logoimage" style="padding-top: 50px">
+            <img src="../static/wujianqinjian.png">
+        </div>
+        <div id="testheight2" class="logoimage" style="padding-top: 50px">
+            <img src="../static/wujianqinjian.png">
+        </div>
+    </div>
+  </body>
+  <script>
+      var uMessageName = {name:'fanrui'}
+  var vm=new Vue({
+          el : '#app',
+          data :
+              {
+                  banshee : "报丧女妖"
+              },
+          el : '#medicalmainmenu',
+          data:
+              {
+                  epidemicQuestionnaire:'流调问卷',
+                  diagnosisGuidance:'就诊指引',
+                  examination:'检验检查',
+                  myBill:'我的账单'
+              }
+      });
+  var propertyTest=new Vue({
+      el: '#newtest',
+      data:
+          {
+          color:'test1'
+      }
+  });
+  var pageTop=new Vue({
+     el:'#pageTopTitle',
+     data:
+         {
+         color:'pagetitlecolor'
+     }
+  })
+
+  vm.$data.artificalRegistration="test"
+  </script>
+  <style type="text/css">
+      #topMenu{margin:1% 0% 0% 0%;padding: 0% 0% 0% 0%;height: 100px;display: flex}
+      .backstar{background-image:url("../static/starVanGoph.jpeg");width:100%;height:2000px;position:fixed;background-repeat:no-repeat;background-attachment: fixed}
+      .logoimage{color: green;height: 100%;width: 500px;margin: 0 auto;margin-top: 150px}
+      #pageTopTitle{height:45px;width:30%;text-align:left;margin:1% 0% 0% 2%;padding:0% 0% 0% 0%;color: #f9fafc;font-size: 40px}
+      #medicalmainmenu{/*height:45px;*/width:70%;text-align:right;margin:1% 0% 0% 0%;padding:0% 3% 0% 0%}
+      /*#all{background:#ADFEDC;background-size: inherit}*/
+      test1{color: red}
+      .mainMenuButton {
+          height:40px;width:70px;margin:0% 1% 1% 1%;border:none;
+          font-size: 26px; position: inherit; display: inline-block;
+          padding: 0px 0px 0% 0%; text-decoration: none; color: white; /*border: 1px solid white;*/
+          border-radius: 2px; background-color: transparent;
+          hand:"hover {cursor:hand}"
+      }
+      #videoLIst{height: 500px;width: 2000px;display: flex}
+      #testheight{height: 2000px}
+      #testheight2{height: 2000px}
+      .bansheeVideo{margin: 0% 0% 0% 3%}
+  </style>
+</html>
